@@ -1,6 +1,8 @@
 # Jerry 的项目主页
 
-这是一个使用原生 HTML、CSS 和 JavaScript 制作的个人项目展示主页，用来记录我的学习方向和 GitHub 项目。
+> 🌐 **在线访问**：[https://a0912279821-spec.github.io/portfolio/](https://a0912279821-spec.github.io/portfolio/)
+
+这是一个使用原生 HTML、CSS 和 JavaScript 制作的个人项目展示主页，用来记录我的学习方向和 GitHub 项目。页面展示了 C 语言图书管理系统项目。
 
 ## 如何打开
 
