@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jerry 的个人项目主页，记录学习方向和 GitHub 项目。">
+    <title>Jerry 的项目主页</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <h1>Jerry 的项目主页</h1>
+            <p>大一计算机学生，正在学习 C 语言、前端开发和 AI 工具辅助开发。</p>
+        </header>
+
+        <main>
+            <section class="card" aria-labelledby="projects-title">
+                <h2 id="projects-title">项目展示</h2>
+
+                <article class="project">
+                    <div class="terminal-icon" aria-hidden="true">
+                        <span>&gt;_</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>C 语言图书管理系统</h3>
+                        <p class="tech-stack">C、Makefile、Shell Test、GitHub Actions</p>
+                        <p>
+                            一个命令行图书管理系统，支持图书增删改查、借书还书、文件保存、自动测试和版本发布。
+                        </p>
+                        <a
+                            class="project-link"
+                            href="https://github.com/a0912279821-spec/library"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >查看 GitHub 项目</a>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card" aria-labelledby="learning-title">
+                <h2 id="learning-title">学习记录</h2>
+                <ul class="learning-list">
+                    <li>学会使用 GitHub 管理项目</li>
+                    <li>学会使用 Issue、Pull Request 和 Release</li>
+                    <li>学会给 C 项目添加测试和 CI</li>
+                    <li>学会使用 AI 工具辅助开发</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built by Jerry</p>
+        </footer>
+    </div>
+</body>
+</html>

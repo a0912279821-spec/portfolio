@@ -1,0 +1,247 @@
+:root {
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --text: #10203b;
+    --muted: #475569;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border: #dbe4ef;
+    --shadow: 0 10px 30px rgba(15, 31, 58, 0.07);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+}
+
+.page {
+    width: min(100% - 32px, 960px);
+    margin: 0 auto;
+    padding: 72px 0 32px;
+}
+
+.hero {
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 20px auto 0;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    padding: 34px 38px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    margin: 0 0 24px;
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.terminal-icon {
+    display: grid;
+    place-items: center;
+    width: 118px;
+    aspect-ratio: 1;
+    border: 6px solid #e2e8f0;
+    border-top-width: 20px;
+    border-radius: 10px;
+    background: var(--text);
+    color: #60a5fa;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project-content h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+.project-content p {
+    margin: 14px 0 0;
+    color: var(--muted);
+}
+
+.project-content .tech-stack {
+    margin-top: 6px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.project-link:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.project-link:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.3);
+    outline-offset: 3px;
+}
+
+.learning-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    color: var(--muted);
+    list-style: none;
+}
+
+.learning-list li {
+    position: relative;
+    padding-left: 26px;
+}
+
+.learning-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.68em;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+footer {
+    padding-top: 28px;
+    color: var(--muted);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.js .hero,
+.js .card,
+.js footer {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.js.page-loaded .hero,
+.js.page-loaded .card,
+.js.page-loaded footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.js.page-loaded .card:nth-of-type(1) {
+    transition-delay: 80ms;
+}
+
+.js.page-loaded .card:nth-of-type(2) {
+    transition-delay: 160ms;
+}
+
+.js.page-loaded footer {
+    transition-delay: 240ms;
+}
+
+@media (max-width: 680px) {
+    .page {
+        width: min(100% - 24px, 960px);
+        padding-top: 44px;
+    }
+
+    .hero {
+        margin-bottom: 28px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 26px 22px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .terminal-icon {
+        width: 88px;
+        border-width: 5px;
+        border-top-width: 16px;
+        font-size: 1.5rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .project-link,
+    .js .hero,
+    .js .card,
+    .js footer {
+        transition: none;
+    }
+}
