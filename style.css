@@ -207,6 +207,21 @@ main {
     outline-offset: 3px;
 }
 
+.screenshot-placeholder {
+    margin-top: 28px;
+    padding: 48px 20px;
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    background: var(--background);
+    text-align: center;
+}
+
+.screenshot-placeholder p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
 .direction-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -344,6 +359,10 @@ footer p {
 
     .direction-grid {
         grid-template-columns: 1fr;
+    }
+
+    .screenshot-placeholder {
+        padding: 32px 16px;
     }
 }
 
